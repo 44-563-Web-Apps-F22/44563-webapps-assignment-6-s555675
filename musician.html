@@ -2,10 +2,67 @@
 <html>
  
 <body>
+<head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Musicians Page</title>
 
-<h1> Musician guess by Ishaaq</h1>
+        <!-- Bootstrap CSS CDN -->
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet" 
+        integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" 
+        crossorigin="anonymous">
+    </head>
 
+    <body>
 
+        <!-- Part 2 -->
+        <h2>Musicians guess by Ishaaq </h2>
+        <br>
+        <!-- Part 3 -->
+        <form action="">
+            <label for="secret_value">Enter the secret musician name</label>
+            <input type="password" id="secret_value" name="secret_value" value="john Lennon">
+            <br>
+
+            <label for="guess_musician">Guess the musician</label>
+            <input type="text" name="guess_musician" id="guess_musician" value="">
+            <br>
+
+            <button type="button" onclick="checkGuess()">Check the guess</button>
+        </form>
+        <p id="guess_result">Your result will be displayed here</p>
+        <br>
+       
+
+        <!-- Bootstrap Jquery CDN -->
+        <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js" 
+        integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.min.js" integrity="sha384-7VPbUDkoPSGFnVtYi0QogXtr74QeVeeIs99Qfg5YCF+TidwNdjvaKZX19NZ/e6oz" crossorigin="anonymous"></script>
+
+        <script>
+            // global variables - Part 3
+            var correct = 0
+            var wrong = 0
+
+            // function - Part 3
+            function checkGuess() {
+                secret = document.getElementById("secret_value").value
+                guess = document.getElementById("guess_musician").value
+                result = document.getElementById("guess_result")
+                if(secret == guess) {
+                    correct += 1
+                    alert("You got it right")
+                    confirm("hi")
+                    result.innerHTML = "Correct Guess: " + correct + " Wrong Guess: " + wrong
+                } else {
+                    wrong += 1
+                    alert("Wrong Musician")
+                    result.innerHTML = "Correct Guess: " + correct + " Wrong Guess: " + wrong
+                }
+            }
+        </script>
+
+    </body>
 
 </body>
 </html> 
