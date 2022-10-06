@@ -17,6 +17,7 @@
 
         <!-- Part 2 -->
         <h2>Musicians guess by Ishaaq </h2>
+        <h3> Getting Input </h3>
         <br>
         <!-- Part 3 -->
         <form action="">
@@ -32,6 +33,36 @@
         </form>
         <p id="guess_result">Your result will be displayed here</p>
         <br>
+
+        <!-- part 4 -->
+        <div class="container">
+            <div class="container">
+                <img src="aphids.jpg" class="img-fluid" onclick="swapImage()" id="Image" width="100px" height="100px " alt="insect" >
+                <p id="result">This image will be replaced</p>
+                </div>
+                <script>
+                    var useImage= 1
+                    function swapImage(){
+                        switch(useImage){
+                            case 1: 
+                            document.getElementById("Image").src="aphids.jpg";
+                            useImage =  2;
+                            break;
+                            case 2:
+                            document.getElementById("Image").src="honeybee.jpg";
+                            useImage=3;
+                            break;
+                            case 3:
+                            document.getElementById("Image").src="roaches.jpg";
+                            useImage=1;
+                            break;
+                        }
+                    }
+                </script>
+        
+
+    
+
        
 
         <!-- Bootstrap Jquery CDN -->
